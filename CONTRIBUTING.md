@@ -16,7 +16,7 @@ Thanks for wanting to contribute! This document describes some points about the 
 ## Maintainers
 
 The maintainers of the project are:
- * Ben Edwards (@benedfit)
+ * Jason (@OiYouYeahYou)
 
 The project is being developed by the community. Maintainers merge pull-requests and fix critical bugs. All other features and patches are welcomed to be implemented by community members.
 
@@ -49,7 +49,7 @@ Please do not take offence if your ticket is closed. We're only trying to keep t
 
 ## Filing bugs
 
-If you found an error, typo, or any other flaw in the project, please report it using [GitHub Issues](https://github.com/benedfit/pug-lint/issues). Try searching the issues to see if there is an existing report of your bug or feature request.
+If you found an error, typo, or any other flaw in the project, please report it using [GitHub Issues](https://github.com/OiYouYeahYou/pug-lint/issues). Try searching the issues to see if there is an existing report of your bug or feature request.
 
 When it comes to bugs, the more details you provide, the easier it is to reproduce the issue and the faster it could be fixed.
 

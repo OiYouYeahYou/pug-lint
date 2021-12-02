@@ -1,6 +1,6 @@
 # pug-lint
 
-An unopinionated and configurable linter and style checker for Pug (formerly Jade)
+An unopinionated and configurable linter and style checker for Pug
 
 [![build status](https://img.shields.io/travis/pugjs/pug-lint/master.svg)](https://travis-ci.org/pugjs/pug-lint)
 [![coverage status](https://img.shields.io/codecov/c/github/pugjs/pug-lint/master.svg)](https://codecov.io/gh/pugjs/pug-lint)
@@ -12,7 +12,7 @@ An unopinionated and configurable linter and style checker for Pug (formerly Jad
 ### Installation
 
 ```shell
-$ npm install -g pug-lint
+$ npm install -g @oiyouyeahyou/pug-lint
 ```
 
 ### Usage
