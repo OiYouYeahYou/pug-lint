@@ -30,62 +30,26 @@ $ pug-lint [options] <file ...>
 
 ## Editor integration
 
-### Sublime Text 3
-
-If you use SublimeLinter 3 with Sublime Text 3, you can install the
-[SublimeLinter-pug-lint](https://github.com/SublimeLinter/SublimeLinter-pug-lint)
-plugin using [Package Control](https://packagecontrol.io/).
-
-### Atom
-
-If you use Atom, you can install the [linter-pug](https://atom.io/packages/linter-pug) package.
-
-### VS Code
-
-If you use VS Code, you can install the [vscode-puglint](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-puglint) extension.
-
-### Vim
-
-pug-lint is part of [syntastic](https://github.com/scrooloose/syntastic).
-
-If you are using [vim-plug](https://github.com/junegunn/vim-plug) to manage your
-Vim plugins (recommended), you can do:
-
-```
-" In your ~/.vimrc
-Plug 'scrooloose/syntastic'
-" Then run these commands
-:source %
-:PlugInstall
-```
-
-Then to turn the pug linter on, you will need this line in your `.vimrc`.
-
-```
-let g:syntastic_pug_checkers = ['pug_lint']
-```
+| Editor | Tool |
+| ---: | --- |
+| **Sublime Text 3** | [SublimeLinter-pug-lint](https://github.com/SublimeLinter/SublimeLinter-pug-lint) |
+| **Atom** | [linter-pug](https://atom.io/packages/linter-pug) |
+| **VS Code** | [vscode-puglint](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-puglint) |
+| **Vim (Syntastic)** | pug-lint is part of [syntastic](https://github.com/scrooloose/syntastic) |
+| **Vim (vim-plug)** | [vim-plug](https://github.com/junegunn/vim-plug) |
 
 ## Build system integration
 
-### Gulp
-
-If you're using Gulp as your build system, you can use [gulp-pug-linter](https://github.com/ilyakam/gulp-pug-linter) for easier integration.
-
-### Grunt
-
-If you're using Grunt as your build system, you can use [grunt-puglint](https://github.com/mrmlnc/grunt-puglint) for easier integration.
+| Editor | Tool |
+| ---: | --- |
+| **Gulp** | [gulp-pug-linter](https://github.com/ilyakam/gulp-pug-linter) |
+| **Grunt** | [grunt-puglint](https://github.com/mrmlnc/grunt-puglint) |
 
 ## Configuration file
 
 Options and rules can be specified in a `.pug-lintrc`, `.pug-lintrc.js`, or `.pug-lintrc.json` file, or via adding a `"pugLintConfig"` option to `package.json`.
 
 ### Options
-
-#### preset `deprecated`
-
-Presets have been deprecated in favour of [extending configuration files](#extends).
-
-> Instructions for those wishing to continue to use the rules defined in the deprecated `clock` preset can be found at https://github.com/pugjs/pug-lint/issues/80#issuecomment-223283681
 
 #### extends
 
@@ -146,6 +110,13 @@ Array of file path matching patterns to load additional rules from, e.g.:
   "additionalRules": ["project-rules/*.js"]
 }
 ```
+
+#### preset `deprecated`
+
+Presets have been deprecated in favour of [extending configuration files](#extends).
+
+> Instructions for those wishing to continue to use the rules defined in the deprecated `clock` preset can be found at https://github.com/pugjs/pug-lint/issues/80#issuecomment-223283681
+
 
 ### Rules
 
