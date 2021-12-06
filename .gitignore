@@ -3,3 +3,12 @@ node_modules
 npm-debug.log
 test/*ignore*
 .eslintcache
+.nyc_output/
+report/
+
+# NOTE: `lockfile` is not included becasue this is not a consumer
+#       project and is not included in the package tarbal.
+#       But creation is not prevented because
+#       it is used in containerised testing.
+package-lock.json
+yarn.lock
