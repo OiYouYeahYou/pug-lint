@@ -17,6 +17,6 @@ jobs:
               with:
                   node-version: lts/*
             - run: npm install
-            - run: npm lint
-            - run: npm inspect
-            - run: npm depcheck
+            - run: npm run lint
+            - run: npm run inspect
+            - run: npm run depcheck
