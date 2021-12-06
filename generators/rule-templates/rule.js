@@ -11,32 +11,32 @@
 // ```
 
 <% if (optionsType !== 'other') { -%>
-var utils = require('../utils');
+const utils = require('../utils');
 <% } else { -%>
-var assert = require('assert');
+const assert = require('assert');
 <% } -%>
 
 module.exports = function () {};
 
 module.exports.prototype = {
-  name: '<%- optionName %>',
+	name: '<%- optionName %>',
 
-  schema: {
-    enum: [null, true]
-  },
+	schema: {
+		enum: [null, true]
+	},
 
-  configure: function (options) {
+	configure: function (options) {
 <% if (optionsType === 'true') { -%>
-    utils.validateTrueOptions(this.name, options);
+		utils.validateTrueOptions(this.name, options);
 <% } else if (optionsType === 'true|codeSep'){ -%>
-    utils.validateCodeOperatorOptions(this.name, options);
+		utils.validateCodeOperatorOptions(this.name, options);
 <% } else { -%>
-    // reminder: possible options: <%- options.join('|') %>
-    assert(..., this.name + ' option requires ...');
+		// reminder: possible options: <%- options.join('|') %>
+		assert(..., this.name + ' option requires ...');
 <% } -%>
-  },
+	},
 
-  lint: function (file, errors) {
-    // ...
-  }
+	lint: function (file, errors) {
+		// ...
+	}
 };

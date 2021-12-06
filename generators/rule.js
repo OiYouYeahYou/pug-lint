@@ -50,8 +50,7 @@ module.exports = generators.Base.extend({
 				choices: [
 					'true',
 					{
-						name:
-							'true or array of code separators ("-", "=", or "!=")',
+						name: 'true or array of code separators ("-", "=", or "!=")',
 						value: 'true|codeSep',
 						short: 'true|Array<code sep>'
 					},
