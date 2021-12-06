@@ -36,6 +36,11 @@ function run(args, cb) {
 
 	return child;
 }
+const carriageReturnRegex = /\r\n/g;
+const getExpected = (name) =>
+	fs
+		.readFileSync(`${fixturesPath}reporters/${name}.txt`, 'utf-8')
+		.replace(carriageReturnRegex, '\n');
 
 describe('cli', () => {
 	it('should output the current version number', (done) => {
@@ -88,10 +93,7 @@ describe('cli', () => {
 
 	it('should report errors for file path', (done) => {
 		const args = [fixturesRelativePath + 'invalid.pug'];
-		const expectedReport = fs.readFileSync(
-			fixturesPath + 'reporters/expected-invalid.txt',
-			'utf-8'
-		);
+		const expectedReport = getExpected('expected-invalid');
 
 		run(args, (error, code, stdout, stderr) => {
 			assert(!error, error);
@@ -111,10 +113,7 @@ describe('cli', () => {
 	it('should report errors for directory path', (done) => {
 		const dirname = fixturesRelativePath + 'rules/';
 		const args = [dirname];
-		const expectedReport = fs.readFileSync(
-			fixturesPath + 'reporters/expected-invalid.txt',
-			'utf-8'
-		);
+		const expectedReport = getExpected('expected-invalid');
 
 		run(args, (error, code, stdout, stderr) => {
 			assert(!error, error);
@@ -136,10 +135,8 @@ describe('cli', () => {
 			fixturesPath + 'config-file/dotfile/.pug-lintrc',
 			dirname + 'disallow-block-expansion.pug'
 		];
-		const expectedReport = fs.readFileSync(
-			fixturesPath +
-				'reporters/expected-disallow-block-expansion--console.txt',
-			'utf-8'
+		const expectedReport = getExpected(
+			'expected-disallow-block-expansion--console'
 		);
 
 		run(args, (error, code, stdout, stderr) => {
@@ -180,10 +177,8 @@ describe('cli', () => {
 			fixturesPath + 'config-file/dotfile/.pug-lintrc',
 			dirname + 'disallow-block-expansion.pug'
 		];
-		const expectedReport = fs.readFileSync(
-			fixturesPath +
-				'reporters/expected-disallow-block-expansion--inline.txt',
-			'utf-8'
+		const expectedReport = getExpected(
+			'expected-disallow-block-expansion--inline'
 		);
 
 		run(args, (error, code, stdout, stderr) => {
